@@ -1,6 +1,6 @@
 package com.codeup.springblog;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 
