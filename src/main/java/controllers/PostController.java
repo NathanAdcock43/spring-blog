@@ -1,4 +1,4 @@
-package com.codeup.springblog;
+package controllers;
 
 public class PostController {
     @GetMapping("/hello/{name}")

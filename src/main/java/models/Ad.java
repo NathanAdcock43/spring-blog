@@ -26,6 +26,7 @@ public class Ad {
     public Ad(String title, String description, User user) {
         this.title = title;
         this.description = description;
+        this.owner = user;
     }
 
     // Read Constructor
@@ -33,6 +34,7 @@ public class Ad {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.owner = user;
     }
 
     public long getId() {
