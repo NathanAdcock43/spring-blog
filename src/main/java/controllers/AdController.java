@@ -25,7 +25,7 @@ public class AdController {
 
     @GetMapping("/ads")
 //    @RequestMapping(value = "/ads", method = RequestMethod.GET)
-    public String index(Model model){
+        public String index(Model model){
         List<Ad> adsList = adsDao.findAll();
         model.addAttribute("noAdsFound", adsList.size() == 0);
         model.addAttribute("ads", adsList);
