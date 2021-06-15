@@ -2,6 +2,7 @@ package models;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "ads")
@@ -19,22 +20,26 @@ public class Ad {
     @OneToOne
     private User owner;
 
+    @OneToMany(cascade= CascadeType.All, mappedBy = "ad")
+    private List<AdImage> images;
 
     public Ad() {}
 
     //  Insert for Creating new add
-    public Ad(String title, String description, User user) {
+    public Ad(String title, String description, User user, List<AdImage> images) {
         this.title = title;
         this.description = description;
         this.owner = user;
+        this.images = images;
     }
 
     // Read Constructor
-    public Ad(long id, String title, String description, User user) {
+    public Ad(long id, String title, String description, User user, List<AdImage> images) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.owner = user;
+        this.images = images;
     }
 
     public long getId() {
@@ -67,5 +72,13 @@ public class Ad {
 
     public void setOwner(User owner) {
         this.owner = owner;
+    }
+
+    public List<AdImage> getImages() {
+        return images;
+    }
+
+    public void setImages(List<AdImage> images) {
+        this.images = images;
     }
 }
