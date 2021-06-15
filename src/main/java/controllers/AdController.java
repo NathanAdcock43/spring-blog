@@ -1,9 +1,9 @@
-package com.codeup.marco.adlister.controllers;
+
 
 import com.codeup.marco.adlister.daos.AdsRepository;
 import com.codeup.marco.adlister.daos.UsersRepository;
-import com.codeup.marco.adlister.models.Ad;
-import com.codeup.marco.adlister.models.User;
+import models.Ad;
+import models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
